@@ -10,7 +10,7 @@ function ProfileContent() {
   return (
     <>
       <div className="Profile Profile-50">
-        {loading ? (
+        {!loading ? (
           post.map(user => {
             return (
               <div key={user.data.id}>

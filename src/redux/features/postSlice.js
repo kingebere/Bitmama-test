@@ -19,14 +19,14 @@ export const getRepo = createAsyncThunk("get/getRepo", async ({logins}) => {
 const postSlice = createSlice({
   name: "post",
   initialState: {
-    loading: false,
+    loading: true,
     error: null,
     post: localStorage.getItem("post")
       ? JSON.parse(localStorage.getItem("post"))
       : [],
     repository: [],
     data: [],
-    loginloading: false,
+    loginloading: true,
   },
   //filter functionality
   reducers: {
@@ -46,7 +46,7 @@ const postSlice = createSlice({
       localStorage.setItem("post", JSON.stringify(state.post));
     },
     [getUser.rejected]: (state, action) => {
-      state.loading = false;
+      state.loading = true;
       state.error = action.payload;
     },
 
