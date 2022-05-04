@@ -22,7 +22,7 @@ function Home() {
       navigate("/login");
       return;
     }
-  }, []);
+  }, [code]);
 
   console.log(code);
   useEffect(() => {
