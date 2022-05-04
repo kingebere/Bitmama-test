@@ -12,6 +12,7 @@ function LoginPage() {
   const {post} = useSelector(state => ({
     ...state.app,
   }));
+
   useEffect(() => {
     if (post.length > 0) {
       navigate("/");

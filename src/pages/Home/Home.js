@@ -16,11 +16,11 @@ function Home() {
     ...state.app,
   }));
   //security checks to prevent and allow unauthorized and authorized users
-  useEffect(() => {
-    if (post.length === 0) {
-      navigate("/login");
-    }
-  }, []);
+
+  if (post.length === 0) {
+    navigate("/login");
+    return;
+  }
 
   useEffect(() => {
     //add  question mark fallback incase of when empty
