@@ -26,6 +26,7 @@ and add the following environment variables to your .env file
 
 `REACT_APP_CLIENT_ID = YOUR_GITHUB_APP_CLIENT_ID`
 `REACT_APP_REDIRECT_URI = https://localhost:3000`
+`REACT_APP_LOCAL_LINK = http://localhost:5000`
 
 ## Run Locally
 
