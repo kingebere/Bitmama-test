@@ -13,7 +13,7 @@ function ProfileContent() {
         {post ? (
           post.map(user => {
             return (
-              <div key={user.data.id}>
+              <div key={user.data.id} className="border-grey">
                 <img
                   className="Profile__img"
                   alt={user.data.name}
@@ -42,12 +42,12 @@ function ProfileContent() {
                       ></path>
                     </svg>
                     <span>{user.data.followers}</span>
-                    <span>followers</span>
+                    <h4>followers</h4>
                   </span>
                   .
                   <span className="Profile__span">
                     <span>{user.data.following}</span>
-                    <span>following</span>
+                    <h4>following</h4>
                   </span>
                 </div>
 

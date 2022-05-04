@@ -32,6 +32,15 @@ h3 {
   margin: 0;
   display: inline-block;
 }
+h4 {
+  margin: 0;
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.border-grey {
+  border-bottom: 1px solid var(--creamyblue-border);
+}
 .img {
   max-width: 100%;
 }
@@ -41,6 +50,12 @@ h3 {
 a {
   text-decoration: none;
   color: var(--original-black);
+}
+a:hover {
+  color: var(--blue-text);
+}
+a:active {
+  color: var(--cream-blue);
 }
 h2 {
   margin: 0;
@@ -63,7 +78,7 @@ select {
   display: inline-block;
   padding: 5px 16px;
   font-size: 1.4rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 20px;
   white-space: nowrap;
   display: flex;
@@ -78,9 +93,9 @@ select {
   -webkit-appearance: none;
   appearance: none;
   color: var(--border-grey);
-  background-color: #f6f8fa;
+  background-color: var(--light-blue);
   border-color: var(--dark-shadow);
-  box-shadow: 0 1px 0 #1b1f240a, inset 0 1px 0 #ffffff40;
+  box-shadow: 0 1px 0 var(--shadow-greyblue), inset 0 1px 0 var(--shadow-grey);
 }
 .triangle-icon {
   display: inline-block;
@@ -122,6 +137,9 @@ ul {
   --dim-black: #080808;
   --original-white: #ffffff;
   --cream-blue: #2828ee;
+  --light-blue: #f6f8fa;
+  --shadow-grey: #ffffff40;
+  --shadow-greyblue: #1b1f240a;
   --border-white: #d8dee4;
   --border-grey: #24292f;
   --background-grey: #afb8c133;
