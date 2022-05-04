@@ -15,6 +15,7 @@
   gap: 0.6rem;
   color: var(--border-grey);
   font-size: 1.4rem;
+  cursor: pointer;
 }
 .NavBar__buttonContainer {
   display: flex;
@@ -30,6 +31,7 @@
   color: var(--border-grey);
   background-color: var(--background-grey);
   font-size: 1.4rem;
+  cursor: pointer;
 }
 
 .active {

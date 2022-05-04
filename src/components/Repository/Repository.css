@@ -12,6 +12,7 @@
 }
 .Reposit__h1 {
   color: var(--blue-text);
+  cursor: pointer;
   font-size: 2.5rem;
   font-weight: 600;
 }
@@ -25,9 +26,11 @@
   white-space: nowrap;
   border: 1px solid var(--creamyblue-border);
   border-radius: 13px;
+  cursor: pointer;
 }
 .Reposit__h2 {
   font-size: 12px;
+  cursor: pointer;
   color: var(--grey-text);
 }
 .flex {

@@ -12,6 +12,7 @@
   font-size: 2rem;
   font-style: normal;
   font-weight: 300;
+  cursor: pointer;
   line-height: 24px;
   color: #57606a;
   padding-bottom: 16px;
@@ -23,6 +24,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  cursor: pointer;
   margin: 16px 0;
   gap: 4px;
   font-size: 1.4rem;
@@ -38,10 +40,12 @@
 .Profile__h1 {
   font-weight: 600;
   color: var(--original-black);
+  cursor: pointer;
 }
 .Profile__img {
   height: 296px;
   border-radius: 50%;
+  cursor: pointer;
   margin-top: -27px;
   border: 1px solid var(--creamyblue-border);
   box-shadow: 0 0 0 1px var(--dark-shadow);
