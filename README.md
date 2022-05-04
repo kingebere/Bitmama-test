@@ -50,6 +50,7 @@ Install dependencies for both client and server side to start the app
 
 - [React]
 - Redux
+- Nodejs
 
 ## Issues encountered
 
