@@ -1,4 +1,6 @@
 import React, {useEffect} from "react";
+
+import {useNavigate} from "react-router-dom";
 import "./Home.css";
 import Profile from "../../containers/Profile/Profile";
 import Repo from "../../containers/Repo/Repo";
@@ -8,9 +10,17 @@ import {useDispatch, useSelector} from "react-redux";
 import {getRepo, getUser} from "../../redux/features/postSlice";
 function Home() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const {post} = useSelector(state => ({
     ...state.app,
   }));
+  //security checks to prevent and allow unauthorized and authorized users
+  useEffect(() => {
+    if (post.length === 0) {
+      navigate("/login");
+    }
+  }, []);
   useEffect(() => {
     // After requesting Github access, Github redirects back to your app with a code parameter
     const url = window.location.href;
@@ -28,7 +38,6 @@ function Home() {
   useEffect(() => {
     //add  question mark fallback incase of when empty
     const logins = post[0]?.data.login;
-    //post.map((user)=> dispatch(getrepo({user.data.login})))
     dispatch(getRepo({logins}));
   }, [post]);
   return (

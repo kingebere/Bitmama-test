@@ -47,6 +47,10 @@ Install dependencies for both client and server side to start the app
   npm i && npm start
 ```
 
+```bash
+  navigate to localhost:3000/login as the start point of this application
+```
+
 ## Built with
 
 - [React]

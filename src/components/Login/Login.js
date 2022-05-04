@@ -1,21 +1,7 @@
-import React, {useEffect} from "react";
+import React from "react";
 import "./Login.css";
-import {useNavigate} from "react-router-dom";
-import {useSelector} from "react-redux";
 
 const Login = () => {
-  const navigate = useNavigate();
-
-  const {post} = useSelector(state => ({
-    ...state.app,
-  }));
-  //security checks to prevent and allow unauthorized and authorized users
-  useEffect(() => {
-    if (post.length > 0) {
-      navigate("/");
-    }
-  }, []);
-
   return (
     <>
       <button className="login-container btn ">
