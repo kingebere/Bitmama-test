@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import "./Home.css";
 
 import {useNavigate} from "react-router-dom";
@@ -15,13 +15,16 @@ function Home() {
   const {post} = useSelector(state => ({
     ...state.app,
   }));
+  const [code] = useState(post);
   //security checks to prevent and allow unauthorized and authorized users
+  useEffect(() => {
+    if (code.length === 0) {
+      navigate("/login");
+      return;
+    }
+  }, []);
 
-  if (post.length === 0) {
-    navigate("/login");
-    return;
-  }
-
+  console.log(code);
   useEffect(() => {
     //add  question mark fallback incase of when empty
     const logins = post[0]?.data.login;
