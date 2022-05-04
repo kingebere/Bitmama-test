@@ -1,14 +1,10 @@
 import {createSlice, createAsyncThunk} from "@reduxjs/toolkit";
 
-//replace with `http://user/signin/callback?code=${code}` to run local development
 export const getUser = createAsyncThunk("get/getUser", async ({code}) => {
-  return fetch(
-    `https://vast-fjord-59660.herokuapp.com/user/signin/callback?code=${code}`,
-    {
-      method: "GET", // *GET, POST, PUT, DELETE, etc.
-      mode: "cors",
-    }
-  ).then(response => response.json());
+  return fetch(`http://localhost:5000/user/signin/callback?code=${code}`, {
+    method: "GET", // *GET, POST, PUT, DELETE, etc.
+    mode: "cors",
+  }).then(response => response.json());
 });
 export const getRepo = createAsyncThunk("get/getRepo", async ({logins}) => {
   return fetch(`https://api.github.com/users/${logins}/repos?per_page=20`).then(
