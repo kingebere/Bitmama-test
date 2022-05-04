@@ -9,11 +9,11 @@ function LoginPage() {
   const navigate = useNavigate();
 
   const dispatch = useDispatch();
-  const [codes] = useState(post);
+
   const {post} = useSelector(state => ({
     ...state.app,
   }));
-
+  const [codes] = useState(post);
   useEffect(() => {
     if (codes.length > 0) {
       navigate("/");
