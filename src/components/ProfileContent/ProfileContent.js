@@ -3,14 +3,14 @@ import "./ProfileContent.css";
 import {useSelector} from "react-redux";
 import Spinner from "../spinner/spinner";
 function ProfileContent() {
-  const {post} = useSelector(state => ({
+  const {post, loading} = useSelector(state => ({
     ...state.app,
   }));
 
   return (
     <>
       <div className="Profile Profile-50">
-        {post ? (
+        {loading ? (
           post.map(user => {
             return (
               <div key={user.data.id}>
