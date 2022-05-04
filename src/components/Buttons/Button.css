@@ -1,0 +1,18 @@
+.button {
+  width: 100%;
+  padding: 0 15px;
+}
+
+@media (min-width: 1200px) {
+  .button-33 {
+    flex: 0 0 33%;
+    max-width: 33%;
+  }
+}
+
+.button__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 8px;
+}

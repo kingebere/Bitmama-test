@@ -1,0 +1,18 @@
+.Home {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1200px) {
+  .Home {
+    max-width: 1267px;
+  }
+}
+
+.Home__row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}

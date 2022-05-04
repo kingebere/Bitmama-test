@@ -1,0 +1,16 @@
+.Repo {
+  width: 100%;
+  padding: 0 15px;
+  position: relative;
+}
+
+.Repo-73 {
+  flex: 0 0 73%;
+  max-width: 73%;
+}
+.Repo__container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--creamyblue-border);
+}

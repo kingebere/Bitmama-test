@@ -1,0 +1,38 @@
+.NavBar {
+  background: var(--original-white);
+  border-bottom: 1px solid var(--border-white);
+}
+.NavBar__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 67px;
+}
+.NavBar__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  color: var(--border-grey);
+  font-size: 1.4rem;
+}
+.NavBar__buttonContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  padding-top: 34px;
+  padding-bottom: 14px;
+}
+
+.greyBorder {
+  padding: 1px 10px 1px 10px;
+  border-radius: 19px;
+  color: var(--border-grey);
+  background-color: var(--background-grey);
+  font-size: 1.4rem;
+}
+
+.active {
+  border-bottom: 3px solid var(--sunny-orange);
+  padding-bottom: 6px;
+}
