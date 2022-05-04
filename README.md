@@ -14,7 +14,7 @@ data with user authentication using Github OAuth
 
 ## Environment Variables Setup:
 
-To run this project, you will need to create .env file in `my-react-app directory` and `server directory`
+To run this project, you will need to create .env file in `root directory` and `server directory`
 and add the following environment variables to your .env file
 
 .env in server directory
@@ -22,9 +22,10 @@ and add the following environment variables to your .env file
 `GITHUB_APP_CLIENT_SECRET = YOUR_GITHUB_APP_CLIENT_SECRET`
 `GITHUB_APP_CLIENT_ID = YOUR_GITHUB_APP_CLIENT_ID`
 
-.env in my-react-app directory inside root directory
+.env in root directory inside root directory
 
 `REACT_APP_CLIENT_ID = YOUR_GITHUB_APP_CLIENT_ID`
+`REACT_APP_REDIRECT_URI = https://localhost:3000`
 
 ## Run Locally
 
@@ -40,7 +41,8 @@ Install dependencies for both client and server side to start the app
 ```bash
   cd server
   npm i && npm start
-  cd my-react-app
+
+  for root directory (client)
   npm i && npm start
 ```
 
@@ -58,3 +60,7 @@ Install dependencies for both client and server side to start the app
 
 - Added static value for starred repositories
 - Converted to milliseconds and then to days
+
+## Deployment
+
+- The node server is hosted on Heroku at https://vast-fjord-59660.herokuapp.com
