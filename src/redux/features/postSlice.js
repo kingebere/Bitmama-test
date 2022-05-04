@@ -1,5 +1,10 @@
 import {createSlice, createAsyncThunk} from "@reduxjs/toolkit";
 
+export const getRepo = createAsyncThunk("get/getRepo", async ({logins}) => {
+  return fetch(`https://api.github.com/users/${logins}/repos?per_page=20`).then(
+    response => response.json()
+  );
+});
 export const getUser = createAsyncThunk("get/getUser", async ({code}) => {
   return fetch(
     `${process.env.REACT_APP_LOCAL_LINK}/user/signin/callback?code=${code}`,
@@ -8,11 +13,6 @@ export const getUser = createAsyncThunk("get/getUser", async ({code}) => {
       mode: "cors",
     }
   ).then(response => response.json());
-});
-export const getRepo = createAsyncThunk("get/getRepo", async ({logins}) => {
-  return fetch(`https://api.github.com/users/${logins}/repos?per_page=20`).then(
-    response => response.json()
-  );
 });
 
 //adding to localstorage

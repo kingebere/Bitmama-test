@@ -8,14 +8,14 @@ function Repository() {
   const time1 = new Date();
 
   //get user repo state from redux
-  const {repository, loginloading} = useSelector(state => ({
+  const {repository} = useSelector(state => ({
     ...state.app,
   }));
 
   return (
     <>
       <div>
-        {!loginloading ? (
+        {repository ? (
           repository.map(vcd => {
             return (
               <div key={vcd.id} className="Reposit">
