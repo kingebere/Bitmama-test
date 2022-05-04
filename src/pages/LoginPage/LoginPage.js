@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 
 import {useDispatch, useSelector} from "react-redux";
@@ -9,12 +9,13 @@ function LoginPage() {
   const navigate = useNavigate();
 
   const dispatch = useDispatch();
+  const [codes] = useState(post);
   const {post} = useSelector(state => ({
     ...state.app,
   }));
 
   useEffect(() => {
-    if (post.length > 0) {
+    if (codes.length > 0) {
       navigate("/");
     }
     // After requesting Github access, Github redirects back to your app with a code parameter
