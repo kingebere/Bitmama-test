@@ -8,7 +8,7 @@ function Repository() {
   const time1 = new Date();
 
   //get user repo state from redux
-  const {repository} = useSelector(state => ({
+  const {repository, loginloading} = useSelector(state => ({
     ...state.app,
   }));
 
