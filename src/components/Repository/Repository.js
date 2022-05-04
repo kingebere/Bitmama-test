@@ -15,7 +15,7 @@ function Repository() {
   return (
     <>
       <div>
-        {repository ? (
+        {!loginloading ? (
           repository.map(vcd => {
             return (
               <div key={vcd.id} className="Reposit">
