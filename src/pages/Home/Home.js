@@ -28,7 +28,6 @@ function Home() {
   useEffect(() => {
     //add  question mark fallback incase of when empty
     const logins = post[0]?.data.login;
-    //post.map((user)=> dispatch(getrepo({user.data.login})))
     dispatch(getRepo({logins}));
   }, [post]);
   return (
