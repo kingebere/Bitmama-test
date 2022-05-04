@@ -29,7 +29,7 @@ function Home() {
     //add  question mark fallback incase of when empty
     const logins = post[0]?.data.login;
     dispatch(getRepo({logins}));
-  }, []);
+  }, [post]);
   return (
     <>
       <div>
