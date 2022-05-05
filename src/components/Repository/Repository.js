@@ -16,23 +16,23 @@ function Repository() {
     <>
       <div>
         {!loginloading ? (
-          repository.map(vcd => {
+          repository.map(repo => {
             return (
-              <div key={vcd.id} className="Reposit">
+              <div key={repo.id} className="Reposit">
                 <div>
                   <div className="flex">
-                    <p className="Reposit__h1">{vcd.name}</p>
-                    <p className="Reposit__h1">{vcd.description}</p>
-                    <span className="Reposit__h3">{vcd.visibility}</span>
+                    <p className="Reposit__h1">{repo.name}</p>
+                    <p className="Reposit__h3">{repo.description}</p>
+                    <span className="Reposit__h3">{repo.visibility}</span>
                   </div>
                   <div className="flex Reposit__h2">
-                    <p>{vcd.language ? vcd.language : "Forked"}</p>
+                    <p>{repo.language ? repo.language : "Forked"}</p>
                     {/* convert the github ISOstring to date and subtract from current time , divide by
                     86400000 milliseconds , which is equivalent to one day . Trunc is used to get Intger number only . */}
                     <p>
                       Updated{" "}
                       {Math.trunc(
-                        (time1 - new Date(vcd.updated_at)) / 86400000
+                        (time1 - new Date(repo.updated_at)) / 86400000
                       )}{" "}
                       days ago
                     </p>
