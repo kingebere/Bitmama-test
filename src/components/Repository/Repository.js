@@ -25,7 +25,7 @@ function Repository() {
 
                     <span className="Reposit__h3">{repo.visibility}</span>
                   </div>
-                  <div className="Reposit__h2">
+                  <div className="Reposit__h4">
                     <p>{repo.description}</p>
                   </div>
                   <div className="flex Reposit__h2">

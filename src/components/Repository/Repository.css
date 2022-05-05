@@ -33,6 +33,11 @@
   cursor: pointer;
   color: var(--grey-text);
 }
+.Reposit__h4 {
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: var(--grey-text);
+}
 .flex {
   display: flex;
   gap: 12px;
