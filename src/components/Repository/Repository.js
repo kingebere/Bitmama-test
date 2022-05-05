@@ -22,8 +22,11 @@ function Repository() {
                 <div>
                   <div className="flex">
                     <p className="Reposit__h1">{repo.name}</p>
-                    <p className="Reposit__h3">{repo.description}</p>
+
                     <span className="Reposit__h3">{repo.visibility}</span>
+                  </div>
+                  <div>
+                    <p className="Reposit__h2">{repo.description}</p>
                   </div>
                   <div className="flex Reposit__h2">
                     <p>{repo.language ? repo.language : "Forked"}</p>
