@@ -14,8 +14,14 @@
   justify-content: center;
   gap: 0.6rem;
   color: var(--border-grey);
+  border-radius: 4px;
   font-size: 1.4rem;
   cursor: pointer;
+}
+.NavBar__button:hover {
+  text-decoration: none;
+  background: var(--hover-grey);
+  transition: all 0.12s ease-out;
 }
 .NavBar__buttonContainer {
   display: flex;

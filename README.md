@@ -9,7 +9,7 @@ This is a job interview for Changera .
 # Github User App
 
 Web app built with React, Node.js, and
-Express for getting Github User repository
+Express for getting and filtering a Github User repository
 data with user authentication using Github OAuth
 
 ## Environment Variables Setup:

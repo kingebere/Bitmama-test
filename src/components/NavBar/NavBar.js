@@ -50,7 +50,9 @@ function NavBar() {
                   ></path>
                 </svg>
               </div>
-              <li>Repositories</li>
+              <li>
+                <strong>Repositories</strong>
+              </li>
               <div className="greyBorder">
                 {post && post[0]?.data.public_repos}
               </div>

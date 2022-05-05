@@ -1,7 +1,6 @@
 import React from "react";
 import "./ProfileContent.css";
 import {useSelector} from "react-redux";
-import Spinner from "../spinner/spinner";
 function ProfileContent() {
   const {post} = useSelector(state => ({
     ...state.app,
@@ -9,8 +8,8 @@ function ProfileContent() {
 
   return (
     <>
-      <div className="Profile Profile-50">
-        {post ? (
+      <div className="Profile Profile-27">
+        {post &&
           post.map(user => {
             return (
               <div key={user.data.id} className="border-grey">
@@ -23,7 +22,7 @@ function ProfileContent() {
 
                 <h3 className="Profile__h3"> {user.data.login}</h3>
                 <p className="Profile__bio"> {user.data.bio}</p>
-                <button className="btn btn--width">Edit button</button>
+                <button className="btn btn--width">Edit profile</button>
                 <div className="Profile__set">
                   <span className="Profile__span">
                     <svg
@@ -109,10 +108,7 @@ function ProfileContent() {
                 </div>
               </div>
             );
-          })
-        ) : (
-          <Spinner />
-        )}
+          })}
       </div>
     </>
   );
