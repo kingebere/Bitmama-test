@@ -36,10 +36,13 @@
 .Reposit__h4 {
   color: var(--grey-text);
   cursor: pointer;
-  margin-bottom: 10px;
+
   font-size: 1.4rem;
   line-height: 1.4;
   padding-right: 250px;
+}
+.Reposit__h4 > p {
+  margin-bottom: 10px;
 }
 .flex {
   display: flex;
